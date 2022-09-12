@@ -1,41 +1,40 @@
 //Task 2.1 
 //Classic pokemons list
 
-let pokemonList = [
+let pokemonlist = [
     {
-      name : 'Bulbasaur',
+      name : 'bulbasaur',
       height : 7,
       types : ['grass', 'poison']
     },
 
     {
-      name : 'Charmander',
+      name : 'charmander',
       height : 8,
       types : ['fire']
     },
     
     {
-      name : 'Butterfree',
+      name : 'butterfree',
       height : 10,
       types : ['bug', 'flying']
     },
 
     {
-      name : 'Squirtle',
+      name : 'squirtle',
       height : 6,
       types : ['water']
     },
 
     {
-        name: 'Pidgeotto',
+        name: 'pidgeotto',
         height: 5,
         types: ['flying', 'normal']
     },
 
     {
-        name: 'Pikachu',
+        name: 'pikachu',
         height: 4,
         types: 'electric',
     }
   ]
-
