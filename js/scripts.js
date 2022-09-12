@@ -1,7 +1,7 @@
 //Task 2.1 
 //Classic pokemons list
 
-let pokemonlist = [
+let pokemonList = [
     {
       name : 'bulbasaur',
       height : 7,
@@ -38,3 +38,23 @@ let pokemonlist = [
         types: 'electric',
     }
   ]
+
+  // Height limit threshold
+  let threshold = 8
+
+  for (let i = 0; i < pokemonList.length; i++) {
+    // Interpolates the string
+    let text = `${pokemonList[i].name} (height: ${pokemonList[i].height}")`
+
+    // If the height of the pokemon is bigger than 8, then:
+    if (pokemonList[i].height > threshold) {
+      // Concatenate the text 
+      text = `${text} - Wow, that's big!`
+    }
+
+    //let text = pokemonList[i].name + " (height: " + pokemonList[i].height + ")"
+    let div = "<div class='poke'>" + text + "</div>"
+    let lineBreak = "<br/>"
+
+    document.write(div, lineBreak)
+  }
