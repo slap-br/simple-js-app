@@ -52,7 +52,6 @@ let pokemonList = [
       text = `${text} - Wow, that's big!`
     }
 
-    //let text = pokemonList[i].name + " (height: " + pokemonList[i].height + ")"
     let div = "<div class='poke'>" + text + "</div>"
     let lineBreak = "<br/>"
 
