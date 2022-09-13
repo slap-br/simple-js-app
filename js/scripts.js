@@ -52,8 +52,8 @@ let pokemonList = [
       text = `${text} - Wow, that's big!`
     }
 
-    let div = "<div class='poke'>" + text + "</div>"
-    let lineBreak = "<br/>"
+      let div = "<div class='poke'>" + text + "</div>"
+      let lineBreak = "<br/>"
 
     document.write(div, lineBreak)
   }
