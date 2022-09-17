@@ -1,6 +1,15 @@
 .poke {
-    background-color: rgba(0, 120, 0, 1);
+    background-color: rgb(120, 146, 120);
     color: rgba(255, 255, 255, 1);
     padding: 12px;
     border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.special-pokemon {
+    background-color: rgb(238, 212, 10);
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
