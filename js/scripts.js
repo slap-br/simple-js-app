@@ -5,43 +5,43 @@
 let pokemonRepository = (function() {
   let pokemonList = [ //array with pokemons
       {
-        name : 'bulbasaur',
+        name : 'Bulbasaur',
         height : 7,
         types : ['grass', 'poison']
       },
   
       {
-        name : 'charmander',
+        name : 'Charmander',
         height : 8,
         types : ['fire']
       },
       
       {
-        name : 'butterfree',
+        name : 'Butterfree',
         height : 10,
         types : ['bug', 'flying']
       },
   
       {
-        name : 'squirtle',
+        name : 'Squirtle',
         height : 6,
         types : ['water']
       },
   
       {
-          name: 'pidgeotto',
+          name: 'Pidgeotto',
           height: 5,
           types: ['flying', 'normal']
       },
   
       {
-          name: 'pikachu',
+          name: 'Pikachu',
           height: 4,
           types: 'electric',
       }
    ]
   
-  // add item - pokemonList.push()
+  // add item - pokemonList.push() adiciona novo item pra lista
   function add(item) {
     return pokemonList.push(item);
   }
@@ -54,12 +54,38 @@ let pokemonRepository = (function() {
     let pokemons = pokemonList.filter((p) => { return p.height > height });
     return pokemons;
   }
-  
-  
+
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list"); //adiciona a classe na variavel pokemonList
+
+    let listpokemon = document.createElement("li"); //cria lista na variavel listPokemon
+
+    let button = document.createElement("button"); //cria variavel de botao
+
+    button.innerText = pokemon.name; //joga o nome do pokemon dentro do botao
+
+    button.classList.add("button-class"); //cria a classe do botao
+
+    listpokemon.appendChild(button); //lista o boto na pagina
+
+    pokemonList.appendChild(listpokemon);
+
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon); 
+    })
+    
+  }
+
+  function showDetails(pokemon){
+    console.log(pokemon);
+  }
+
    return {
       getAll : getAll,
       add : add,
-      heightGreaterThan : heightGreaterThan
+      heightGreaterThan : heightGreaterThan,
+      addListItem : addListItem,
+      showDetails : showDetails
     };
   
   })()
@@ -75,17 +101,20 @@ let pokemonRepository = (function() {
   const threshold = 8;
   
   pokemonList.forEach((pokemon) => {
+    pokemonRepository.addListItem(pokemon);
+  });
+
+  
+  /**
     // Interpolates the string
     let pokemonDescription = `${pokemon.name} (height: ${pokemon.height}")`;
     if (pokemon.height > threshold) {
       // Concatenate the text 
       pokemonDescription = `${pokemonDescription} - Wow, that's big!`;
     }
-
     let div = "<div class='poke'>" + pokemonDescription + "</div>";
-
   document.write(div);
-    });
+    });  */
   
   
   
