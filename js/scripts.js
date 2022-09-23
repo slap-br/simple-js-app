@@ -3,43 +3,8 @@
 //Create a new var "PokemonRepository" and assign to IIFE
 
 let pokemonRepository = (function() {
-  let pokemonList = [ //array with pokemons
-      {
-        name : 'Bulbasaur',
-        height : 7,
-        types : ['grass', 'poison']
-      },
-  
-      {
-        name : 'Charmander',
-        height : 8,
-        types : ['fire']
-      },
-      
-      {
-        name : 'Butterfree',
-        height : 10,
-        types : ['bug', 'flying']
-      },
-  
-      {
-        name : 'Squirtle',
-        height : 6,
-        types : ['water']
-      },
-  
-      {
-          name: 'Pidgeotto',
-          height: 5,
-          types: ['flying', 'normal']
-      },
-  
-      {
-          name: 'Pikachu',
-          height: 4,
-          types: 'electric',
-      }
-   ]
+  let pokemonList = []
+
   
   // add item - pokemonList.push() adiciona novo item pra lista
   function add(item) {
@@ -71,7 +36,7 @@ let pokemonRepository = (function() {
     pokemonList.appendChild(listpokemon);
 
     button.addEventListener('click', function(event) {
-      showDetails(pokemon); 
+      showDetails(pokemon);
     })
     
   }
