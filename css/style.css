@@ -20,14 +20,8 @@ ul {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-left: 40%;
 }
 
-ul, li {
-  flex-grow: 1;
-  flex-basis: 100%;
-  text-align: center;
-}
 
 body {
   font-family: 'Arial', sans-serif;
@@ -36,7 +30,7 @@ body {
 }
 
 /* Header styles */
-.page-header {
+.navbar {
   width: 100%;
   padding: 20px;
   background-color: var(--nav-c1);
@@ -65,6 +59,7 @@ body {
     width: 30%;
     margin: 1em;
     text-align: center;
+    margin-top: 60px
   }
 
   .button-class:hover,
