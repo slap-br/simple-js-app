@@ -14,7 +14,7 @@
       return pokemonList;
     };
 
-    function loadList() { //LISTA LOAD
+  function loadList() { //Load list
       return fetch(apiUrl).then(function (response) {
         return response.json();
       }).then(function(response) {
@@ -29,12 +29,35 @@
       }).catch(function (e) {
         console.error(e);
       })
-    }
+   }
+
+   function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list"); //adiciona a classe na variavel pokemonList
+    pokemonList.classList.add ('list-group');
+
+    let listPokemon = document.createElement("li"); //cria lista na variavel listPokemon
+    listPokemon.classList.add ('group-list-item');
+
+    let button = document.createElement("button"); //cria variavel de botao
+    button.classList.add ('btn', 'btn-primary');
+    button.setAttribute('data-toggle','modal');
+    button.setAttribute('data-target','#modal-container');
+    button.setAttribute('data-backdrop','true');
+
+    button.innerText = pokemon.name; //joga o nome do pokemon dentro do botao
+
+    listPokemon.appendChild(button); //lista o boto na pagina
+
+    pokemonList.appendChild(listPokemon);
+
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon);
+    });
+}
 
     //load pokemon details 
-    function loadDetails(item) {
+  function loadDetails(item) {
       let url = item.detailsUrl;
-      //chamar aqui o capeta do loading
       return fetch(url).then(function (response) {
           return response.json();
       }).then(function (details) {
@@ -85,31 +108,6 @@
     
   }
 
-
-    function addListItem(pokemon){
-      let pokemonList = document.querySelector(".pokemon-list"); //adiciona a classe na variavel pokemonList
-      pokemonList.classList.add ('list-group');
-
-      let listPokemon = document.createElement("li"); //cria lista na variavel listPokemon
-      listPokemon.classList.add ('group-list-item');
-
-      let button = document.createElement("button"); //cria variavel de botao
-      button.classList.add ('btn', 'btn-primary');
-      button.setAttribute('data-toggle','modal');
-      button.setAttribute('data-target','#modal-container');
-      button.setAttribute('data-backdrop','true');
-
-      button.innerText = pokemon.name; //joga o nome do pokemon dentro do botao
-
-      listPokemon.appendChild(button); //lista o boto na pagina
-
-      pokemonList.appendChild(listPokemon);
-
-      button.addEventListener('click', function(event) {
-        showDetails(pokemon);
-      });
-      
-    }
 
     function showDetails(pokemon){ 
       loadDetails(pokemon).then(function (pokemonDetails) {
