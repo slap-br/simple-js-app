@@ -45,9 +45,7 @@
     button.setAttribute('data-backdrop','true');
 
     button.innerText = pokemon.name; //joga o nome do pokemon dentro do botao
-
     listPokemon.appendChild(button); //lista o boto na pagina
-
     pokemonList.appendChild(listPokemon);
 
     button.addEventListener('click', function(event) {

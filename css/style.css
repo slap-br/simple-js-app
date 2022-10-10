@@ -53,20 +53,43 @@ body {
   
 /* Home styles */
 
-  .button-class:hover,
-  .button-class:focus {
+.button {
+  background-color: var(--buton-c1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 15px;
+  margin: 5px;
+  height: 50px;
+  width: 250px;
+}
+.btn-secondary {
+
+}
+
+.btn:hover,
+  .btn:focus {
     background-color: var(--button-c2);
     background-position: 0 -15px;
   }
+.btn:active,
+.btn.active {
+    background-color: #265a88;
+    border-color: #245580;
+  }
 
-  .pokemon-details-modal {
-    display: none;
+.modal-header {
+  background-color: var(--nav-c1);
+  color: #fff;
+  text-transform: uppercase;
 }
-
-  .modal h1 {
-    margin-top: 0;
-  }
-  
-  .modal p {
-    margin-bottom: 0;
-  }
