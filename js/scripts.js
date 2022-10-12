@@ -36,10 +36,13 @@
     pokemonList.classList.add ('list-group');
 
     let listPokemon = document.createElement("li"); //cria lista na variavel listPokemon
+
+
     listPokemon.classList.add ('group-list-item');
 
+
     let button = document.createElement("button"); //cria variavel de botao
-    button.classList.add ('btn', 'btn-primary');
+    button.classList.add ('btn', 'btn-lg', 'btn-primary','mx-auto', 'p-3', 'mt-2','btn-block');
     button.setAttribute('data-toggle','modal');
     button.setAttribute('data-target','#modal-container');
     button.setAttribute('data-backdrop','true');
@@ -73,10 +76,10 @@
   function showModal (pokemonDetails) {
     let modalContainer = document.getElementById('modal-container');
     const modalBody = modalContainer.querySelector('.modal-body');
-
+    //modalTitle.empty();
+    //modalBody.empty();
     // Clear all existing modal content
     modalBody.innerHTML = '';
-
     // let modal = document.createElement('div');
     // modal.classList.add('modal');
 
@@ -103,9 +106,7 @@
     modalBody.appendChild(imageElement);
     modalBody.appendChild(heightContentElement);
     modalBody.appendChild(typeContentElement);
-    
   }
-
 
     function showDetails(pokemon){ 
       loadDetails(pokemon).then(function (pokemonDetails) {
