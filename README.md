@@ -6,6 +6,8 @@ Find over **100 pokémons** and it **evolutions** on this list;
 - Color Pattern: https://www.onlinepalette.com/pokemon/
 - Written with: **HTML, CSS, JavaScript, Bootstrap/jQuery, ESLint/Prettier**
 
+link: https://slap-br.github.io/simple-js-app/
+
 
 # Printscreen
 
